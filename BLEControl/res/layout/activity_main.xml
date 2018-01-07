@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+ 
+    
+
+	<LinearLayout 
+	    android:id="@+id/tool_mode_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">	
+	    <Button
+	        android:id="@+id/requestTurnLedOnBtn"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="request Turn LED ON" />
+	    <Button
+	        android:id="@+id/requestTurnLedOffBtn"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="request Turn LED OFF" />
+	    <Button
+	        android:id="@+id/requestToggleLedBtn"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="request Toggle LED" />    
+	    <Button
+	        android:id="@+id/scanButton"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="scanOnClick"
+	        android:text="scan" />
+	    <ListView
+	        android:id="@+id/bleDeviceListView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/scanButton"
+	         >
+	    </ListView>
+	</LinearLayout>	    
+
+	
+	<LinearLayout android:id="@+id/gui_mode_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:background="#000000">
+		<FrameLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="match_parent" >
+	    	<ImageView 
+	    	    android:id="@+id/JTImgView"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:adjustViewBounds="true"
+	    		android:src="@drawable/jt_btn_01_normal_400x400" />
+			<Button
+	    	    android:id="@+id/JTImgBtn"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+	    		android:background="@drawable/jt_btn_drawable" />
+	   	</FrameLayout>
+	</LinearLayout>	
+ 	
+ 	
+ 		    
+    <Button
+        android:id="@+id/switch_mode_btn"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="30px" 
+        android:layout_gravity="bottom|right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        android:background="#000000"
+        />
+        
+</FrameLayout>
+
